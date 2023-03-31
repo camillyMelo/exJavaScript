@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Camilly ex13</title>
+    <script>
+      function calcular() {
+        var base = document.getElementById("base").value;
+        var expoente   = document.getElementById("expoente").value;
+        var result = 1;
+       for(var i = 0; i < expoente; i++){
+result= result * base;
+       }
+       
+        document.getElementById("result").innerHTML = "Potência: " + result;
+      }
+    </script>
+    <style>
+      body{
+          background-color: rgb(255, 237, 211);
+      }
+  </style>
+  </head>
+  <body>
+    <h1>Exercício - Camilly 13</h1>
+    <label for="base">Base: </label>
+    <input id="base" type="number" min="1" max="10"><br>
+    <label for="expoente">Expoente: </label>
+    <input id="expoente" type="number" min="1" max="10"><br>
+    <br>
+    <button onclick="calcular()">Calcular a potência</button>
+    <div id="result"></div>
+    
+  </body>
+</html>
+

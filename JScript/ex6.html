@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Camilly ex6</title>
+    <script>
+      function calcularIMC() {
+        var altura = document.getElementById("altura").value;
+        var peso   = document.getElementById("peso").value;
+        altura /= 100;
+        var imc = (peso / (altura * altura)).toFixed(2);
+        document.getElementById("result").innerHTML = "IMC: " + imc;
+      }
+    </script>
+    <style>
+      body{
+          background-color: rgb(255, 237, 211);
+      }
+  </style>
+  </head>
+  <body>
+    <h1>Exercício - Camilly 06</h1>
+    <label for="altura">Altura (cm): </label>
+    <input id="altura" type="number" min="100" max="250"><br>
+    <label for="peso">Peso (kg): </label>
+    <input id="peso" type="number" min="0" max="250"><br>
+    <br>
+    <button onclick="calcularIMC()">Calcular o IMC</button>
+    <div id="result"></div>
+    
+  </body>
+</html>
